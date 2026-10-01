@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Sales Proposal Template · Zoho CRM</title>
+  <!-- Google Fonts & simple reset -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f6f9fc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Card style containers */
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.07), 0 8px 18px -6px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem 2.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e9eef3;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .hero-content {
+      flex: 1 1 380px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f0fe;
+      color: #1a4b8c;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.3px;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 1.2rem;
+      border: 1px solid #cddff7;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #0b1e33;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-highlight {
+      color: #0b6bcb;
+      background: linear-gradient(145deg, #0b6bcb 0%, #0d8be0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 1.8rem;
+      max-width: 600px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      border: 1.5px solid transparent;
+      cursor: default;
+    }
+
+    .btn-primary {
+      background: #0b6bcb;
+      color: white;
+      box-shadow: 0 8px 18px -6px rgba(11, 107, 203, 0.35);
+      border-color: #0b6bcb;
+    }
+
+    .btn-primary:hover {
+      background: #0a5aab;
+      box-shadow: 0 12px 22px -8px rgba(11, 107, 203, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #cbd5e1;
+      color: #1e293b;
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+
+    .hero-visual {
+      flex: 1 1 320px;
+      background: #f0f7ff;
+      border-radius: 32px;
+      padding: 1.8rem 1.8rem 1.2rem 1.8rem;
+      border: 1px solid #d4e3f5;
+      box-shadow: inset 0 1px 4px #ffffff, 0 12px 24px -12px rgba(0, 80, 150, 0.2);
+      min-width: 280px;
+    }
+
+    .proposal-mock {
+      background: white;
+      border-radius: 20px;
+      padding: 1.4rem 1.4rem 1rem 1.4rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e2eaf2;
+    }
+
+    .mock-line {
+      height: 12px;
+      background: #e9eef5;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .mock-line.short {
+      width: 60%;
+    }
+
+    .mock-line.medium {
+      width: 80%;
+    }
+
+    .mock-line.color-accent {
+      background: #d4e2fc;
+    }
+
+    .mock-grid {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .mock-grid > div {
+      flex: 1;
+      height: 40px;
+      background: #edf3fa;
+      border-radius: 8px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #0b1e33;
+    }
+
+    .section-sub {
+      color: #475569;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-top: 1.2rem;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 1.02rem;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #d9f0e1;
+      color: #0b6b4a;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .included-item {
+      background: #fafdff;
+      padding: 1.2rem 1.2rem 1rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid #e0eaf5;
+      transition: background 0.2s;
+    }
+
+    .included-item strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #0b3e6f;
+    }
+
+    .included-item span {
+      color: #526b84;
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      counter-reset: step-counter;
+    }
+
+    .step {
+      flex: 1 1 200px;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: #f9fcff;
+      padding: 1.5rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid #e2ecf9;
+      counter-increment: step-counter;
+    }
+
+    .step::before {
+      content: counter(step-counter);
+      background: #0b6bcb;
+      color: white;
+      font-weight: 700;
+      width: 32px;
+      height: 32px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .step p {
+      font-size: 0.98rem;
+      color: #1e2e44;
+      margin: 0;
+    }
+
+    .requirements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2rem;
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .requirements li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #ecf3fb;
+      padding: 0.4rem 1rem 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      color: #134074;
+    }
+
+    .requirements li::before {
+      content: "•";
+      font-weight: 700;
+      color: #0b6bcb;
+    }
+
+    .privacy-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #eef8f0;
+      border-radius: 18px;
+      padding: 1.2rem 1.8rem;
+      border-left: 6px solid #2e9c6b;
+    }
+
+    .privacy-badge p {
+      margin: 0;
+      font-weight: 500;
+      color: #1a4d33;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 0 1rem;
+      color: #6b7c93;
+      font-size: 0.95rem;
+      border-top: 1px solid #dae5f0;
+      margin-top: 2rem;
+    }
+
+    .footer a {
+      color: #0b6bcb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .email-placeholder {
+      background: #f1f5f9;
+      padding: 0.1rem 0.4rem;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #0b3e6f;
+      font-weight: 500;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e9f2;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .card {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .hero-visual {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Hero section -->
+    <div class="card hero">
+      <div class="hero-content">
+        <div class="badge">📄 ZOHO CRM MAIL MERGE TEMPLATE</div>
+        <h1>
+          Close deals faster with a<br>
+          <span class="hero-highlight">professional sales proposal</span>
+        </h1>
+        <p>
+          A clean, business-ready template built for Zoho CRM. Auto-fill client data, 
+          present polished proposals in seconds — no rebuilding from scratch.
+        </p>
+        <div class="button-group">
+          <a href="#" class="btn btn-primary">Get the template</a>
+          <a href="#how-to" class="btn btn-outline">See how it works</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="proposal-mock">
+          <div class="mock-line color-accent" style="width: 40%;"></div>
+          <div class="mock-line medium"></div>
+          <div class="mock-line short"></div>
+          <div class="mock-grid">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="mock-line" style="margin-top: 16px; width: 80%;"></div>
+          <div class="mock-line short"></div>
+          <div style="display: flex; justify-content: space-between; margin-top: 16px;">
+            <div style="width: 30%; height: 30px; background: #d4e2fc; border-radius: 20px;"></div>
+            <div style="width: 30%; height: 30px; background: #d4e2fc; border-radius: 20px;"></div>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: #2a5c8a; font-weight: 500; font-size: 0.9rem;">
+          ⚡ Auto-filled from Deals, Contacts & Accounts
+        </p>
+      </div>
+    </div>
+
+    <!-- What's included -->
+    <div class="card">
+      <h2 class="section-title">✅ Everything you need in a proposal</h2>
+      <p class="section-sub">Pre-designed sections — just merge and send.</p>
+      <div class="included-grid">
+        <div class="included-item"><strong>Cover Letter</strong><span>Personalized greeting for your client</span></div>
+        <div class="included-item"><strong>Client Information</strong><span>Auto-filled from CRM: name, company, email, phone, billing address</span></div>
+        <div class="included-item"><strong>Project Overview</strong><span>Background, objectives, scope, out-of-scope items</span></div>
+        <div class="included-item"><strong>Proposed Solution</strong><span>Phased delivery (Discovery, Design, Testing, Support)</span></div>
+        <div class="included-item"><strong>Timeline Table</strong><span>Editable phases with duration & dates</span></div>
+        <div class="included-item"><strong>Pricing Table</strong><span>Itemized line items, subtotal, tax, total</span></div>
+        <div class="included-item"><strong>Why Choose Us</strong><span>Customizable value proposition</span></div>
+        <div class="included-item"><strong>Terms & Conditions</strong><span>6 standard clauses you can edit</span></div>
+        <div class="included-item"><strong>Acceptance & Signature</strong><span>Ready for client sign-off</span></div>
+      </div>
+    </div>
+
+    <!-- Key features + Who it's for (two column) -->
+    <div class="grid-2" style="margin-bottom: 2rem;">
+      <div class="card" style="margin-bottom: 0;">
+        <h2 class="section-title" style="font-size: 1.6rem;">🚀 Key features</h2>
+        <ul class="feature-list">
+          <li><strong>Zoho CRM Mail Merge Ready</strong> — pulls data from Deals, Contacts, Accounts</li>
+          <li><strong>Auto-filled fields</strong> — client name, company, email, phone, deal value, close date, billing address</li>
+          <li><strong>Fully customizable</strong> — colors, fonts, sections, layout to match your brand</li>
+          <li><strong>Professional design</strong> — clean in PDF and print</li>
+          <li><strong>Saves time</strong> — generate personalized proposals in seconds</li>
+          <li><strong>No coding required</strong> — works out of the box</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-bottom: 0;">
+        <h2 class="section-title" style="font-size: 1.6rem;">🎯 Who is this for?</h2>
+        <ul class="feature-list">
+          <li>Sales teams managing multiple deals in Zoho CRM</li>
+          <li>Agencies & consultancies sending project proposals</li>
+          <li>Freelancers & solopreneurs who want a professional template</li>
+          <li>Small businesses looking for a repeatable proposal workflow</li>
+        </ul>
+        <div style="margin-top: 1.8rem; background: #f4f9ff; border-radius: 18px; padding: 1.2rem 1.5rem;">
+          <p style="font-weight: 600; color: #0b3e6f; margin-bottom: 0.5rem;">💡 Why this template?</p>
+          <p style="color: #2d4b6b; font-size: 0.98rem;">Writing proposals from scratch wastes time and leads to inconsistent branding. This gives your team a single professional starting point — every proposal looks polished and ready to win.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- How to use + Requirements -->
+    <div class="card" id="how-to">
+      <h2 class="section-title">⚙️ How to use</h2>
+      <p class="section-sub">From install to signed proposal in 7 steps.</p>
+      <div class="steps">
+        <div class="step"><p>Install the template from Zoho Marketplace</p></div>
+        <div class="step"><p>Open Zoho CRM → Setup → Templates → Mail Merge Templates</p></div>
+        <div class="step"><p>Create a new Mail Merge Template for the Deals module</p></div>
+        <div class="step"><p>Select this Professional Sales Proposal Template</p></div>
+        <div class="step"><p>Open any Deal record and run Mail Merge</p></div>
+        <div class="step"><p>Proposal generates with client & deal data pre-filled</p></div>
+        <div class="step"><p>Review, export to PDF, and send to your client</p></div>
+      </div>
+      <hr>
+      <h2 class="section-title" style="font-size: 1.5rem; margin-top: 1rem;">📋 Requirements</h2>
+      <ul class="requirements">
+        <li>Zoho CRM account</li>
+        <li>Zoho Writer access</li>
+        <li>Deals, Contacts & Accounts modules</li>
+        <li>Permission to create Mail Merge Templates</li>
+      </ul>
+    </div>
+
+    <!-- Privacy & Support -->
+    <div class="grid-2" style="margin-bottom: 2rem;">
+      <div class="card" style="margin-bottom: 0;">
+        <div class="privacy-badge">
+          <span style="font-size: 2rem;">🔒</span>
+          <p><strong>Privacy & data:</strong> This template does not collect, store, or transmit any personal data. All client info is processed within your own Zoho CRM account under your organization's data policies.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: center;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📞 Support</h2>
+        <p style="margin-bottom: 0.75rem; color: #334e68;">Questions, customization requests, or support:</p>
+        <p style="margin-bottom: 0.3rem;"><strong>Website:</strong> <a href="https://polashrp.github.io/hrpdev/" style="color: #0b6bcb; text-decoration: none;">https://polashrp.github.io/hrpdev/</a></p>
+        <p><strong>Email:</strong> <span class="email-placeholder">[your HRP Dev email address]</span></p>
+        <p style="margin-top: 1.2rem; font-weight: 600; color: #0b6bcb;">HRP Dev — Building practical tools for modern businesses.</p>
+      </div>
+    </div>
+
+    <!-- Call to action / footer -->
+    <div class="card" style="background: linear-gradient(110deg, #f3f9ff 0%, #ffffff 100%); border: 1px solid #b9d5f0; text-align: center;">
+      <h2 style="font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.8rem; color: #0b1e33;">Ready to send better proposals?</h2>
+      <p style="font-size: 1.15rem; color: #2f4b6b; max-width: 550px; margin: 0 auto 2rem auto;">Install the template and generate your first proposal in under a minute.</p>
+      <a href="#" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Get the template →</a>
+      <p style="margin-top: 1.8rem; font-size: 0.9rem; color: #5a6f86;">Zoho CRM Mail Merge · Works with Deals, Contacts & Accounts</p>
+    </div>
+
+    <div class="footer">
+      <p>© HRP Dev — Professional Sales Proposal Template for Zoho CRM</p>
+      <p style="margin-top: 0.4rem; font-size: 0.85rem;">Template landing page · All product names referenced are for identification purposes only.</p>
+    </div>
+
+  </div>
+</body>
+</html>
